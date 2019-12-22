@@ -39,7 +39,6 @@ class App extends React.Component{
     this.getQuotes();
   }
     render(){
-      console.log(this.state)
       return(
         <div id='quote-box'className='App'>
           <h1 id='text'>
