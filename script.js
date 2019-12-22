@@ -1,6 +1,6 @@
 const APIlink = 'https://gist.githubusercontent.com/b1nary/ea8fff806095bcedacce/raw/6e6de20d7514b93dd69b149289264997b49459dd/enterpreneur-quotes.json'
 const randomNum=(length)=>(Math.floor(Math.random()*length))
-console.log(APIlink)
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -32,26 +32,26 @@ class App extends React.Component{
     let quote = this.state.quotes[newQtID].text
     let author = this.state.quotes[newQtID].from
     this.setState({quote,author})
-    console.log('getNewQuote')
   }
   componentWillMount(){
-    
     this.getQuotes();
   }
-    render(){
-      return(
-        <div id='quote-box'className='App'>
-          <h1 id='text'>
-            {this.state.quote}
-           </h1>
-          <h3 id='author'>by {this.state.author}</h3>
-          <button id='new-quote'onClick={this.getNewQuote}>New Quote</button>
-          <br/>
-          <a href="https://twitter.com/intent/tweet" id='tweet-quote'>[tweet]</a>
-         </div>
-        )
+  render(){
+    return(
+      <div id='quote-box'className='App'>
+        <h1 id='text'>
+          {this.state.quote}
+        </h1>
+        <h3 id='author'>by {this.state.author}</h3>
+        <button id='new-quote'onClick={this.getNewQuote}>New Quote</button>
+        <br/>
+        <a href="https://twitter.com/intent/tweet" id='tweet-quote'>[tweet]</a>
+      </div>
+      )
     }
 }
 
 ReactDOM.render(<App/>, document.getElementById('root'));
+
+
 
