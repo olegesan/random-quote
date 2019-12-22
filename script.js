@@ -1,6 +1,6 @@
 const APIlink = 'https://gist.githubusercontent.com/b1nary/ea8fff806095bcedacce/raw/6e6de20d7514b93dd69b149289264997b49459dd/enterpreneur-quotes.json'
 const randomNum=(length)=>(Math.floor(Math.random()*length))
-
+console.log(APIlink)
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -32,12 +32,14 @@ class App extends React.Component{
     let quote = this.state.quotes[newQtID].text
     let author = this.state.quotes[newQtID].from
     this.setState({quote,author})
+    console.log('getNewQuote')
   }
   componentWillMount(){
     
     this.getQuotes();
   }
     render(){
+      console.log(this.state)
       return(
         <div id='quote-box'className='App'>
           <h1 id='text'>
