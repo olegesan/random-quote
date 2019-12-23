@@ -1,12 +1,55 @@
-#root{
-  max-width:300px;
-  margin:auto;
-  background-color:white;
-  padding:2em;
+html *{
+  margin:0;
+  padding:0
 }
-html{
-  background-color:green
+.container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
-h1{
-  color:black
+#quote-box{
+  padding:1em;
+  max-width:700px;
+  min-width: 300px;
+  width:35vw;
+  display:flex;
+  align-items: center;
+  flex-flow:column;
+  border:1px solid #F3F5F4;
+}
+h3{
+  margin-top:0.5em;
+  display:inline-block;
+  align-self:flex-end;
+  
+}
+.actions{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  flex-flow:row-reverse;
+  margin-top:1em;
+  align-items: baseline;
+}
+button{
+  margin:10px 5px;
+  align-self:flex-end;
+  border:none;
+  padding:1em;
+  font-size:1.2em;
+}
+a{
+  text-decoration: none;
+  margin:10px 5px;
+  align-self:flex-start;
+  padding:1em;
+  font-size:1em;
+  align-self:center;
+}
+.quote-enter{
+  opacity:0.01;
+}
+.quote-enter.quote-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }
